@@ -1,3 +1,6 @@
+@* Conectando a view com o model ContatoModel *@
+@model ContatoModel
+
 @{
     ViewData["Title"] = "Cadastrar Contato";
 }
@@ -8,23 +11,23 @@
 
 <br/>
 
-<form>
+<form asp-controller="Contato" asp-action="Create" method="post"> @* Formulário de cadastro de contato, que envia os dados para a action Create do controller Contato via método POST *@
     <div class="mb-3">
         <label for="Name">Nome</label>
         
-        <input type="text" class="form-control" id="Name" placeholder="Digite o nome">
+        <input type="text" asp-for="Nome" class="form-control" id="Name" placeholder="Digite o nome">
     </div>
     <div class="mb-3">
         <label for="Email">Email</label>
         
-        <input type="text" class="form-control" id="Email" placeholder="Digite o email">
+        <input type="text" asp-for="Email" class="form-control" id="Email" placeholder="Digite o email">
     </div>
     <div class="mb-3">
         <label for="phoneNumber">Celular</label>
         
-        <input type="text" class="form-control" id="phoneNumber" placeholder="Digite o número de celular" aria-describedby="phoneNumberHelp">
+        <input type="text" asp-for="Celular" class="form-control" id="phoneNumber" placeholder="Digite o número de celular" aria-describedby="phoneNumberHelp">
         
-        <div id="phoneNumberHelp" class="form-text">Digite o número de celular completo (somente número, sem espaços ou caracteres especiais)</div>
+        @* <div id="phoneNumberHelp" class="form-text">Digite o número de celular completo (somente número, sem espaços ou caracteres especiais)</div> *@
     </div>
     
     <br/>
@@ -32,6 +35,6 @@
     <div class="d-flex gap-2">
         <a role="button" class="btn btn-danger w-50" asp-controller="Contato" asp-action="Index">Cancelar</a>
         
-        <a role="button" class="btn btn-primary w-50" asp-controller="Contato" asp-action="Index">Enviar</a>
+        <button type="submit" class="btn btn-primary w-50">Enviar</button> @* Botão de envio do formulário, tem que ser com a tag button e com type, com a tag a não funciona *@
     </div>
 </form>
