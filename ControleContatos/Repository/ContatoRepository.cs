@@ -10,6 +10,10 @@ public class ContatoRepository : IContatoRepository {
         _bancoContext = bancoContext;
     }
 
+    public ContatoModel ListById(int id) {
+        return _bancoContext.Contatos.FirstOrDefault(x => x.Id == id); // Retorna o contato com o id informado
+    }
+
     public List<ContatoModel> GetAll() {
         return _bancoContext.Contatos.ToList(); // Retorna todos os contatos do banco de dados
     }
@@ -17,8 +21,35 @@ public class ContatoRepository : IContatoRepository {
     public ContatoModel Create(ContatoModel contato) {
         // Gravar no banco de dados
         _bancoContext.Contatos.Add(contato); // Adiciona o contato ao banco de dados
+        
         _bancoContext.SaveChanges(); // Salva as alterações no banco de dados
         
         return contato;
+    }
+
+    public ContatoModel Update(ContatoModel contato) {
+        ContatoModel contatoDB = ListById(contato.Id);
+        
+        if (contatoDB == null) throw new Exception("Houve um erro ao atualizar o contato"); // Se o contato não existir, lança uma exceção e encerra a exec
+        
+        contatoDB.Nome = contato.Nome;
+        contatoDB.Email = contato.Email;
+        contatoDB.Celular = contato.Celular;
+
+        _bancoContext.Contatos.Update(contatoDB);
+        _bancoContext.SaveChanges();
+        
+        return contatoDB;
+    }
+
+    public bool Delete(int id) {
+        ContatoModel contatoDB = ListById(id);
+        
+        if (contatoDB == null) throw new Exception("Houve um erro ao deletar o contato");
+        
+        _bancoContext.Contatos.Remove(contatoDB);
+        _bancoContext.SaveChanges();
+        
+        return true;
     }
 }

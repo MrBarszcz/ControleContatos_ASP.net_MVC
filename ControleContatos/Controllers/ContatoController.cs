@@ -21,12 +21,21 @@ public class ContatoController : Controller {
         return View();
     }
     
-    public IActionResult Update() {
-        return View();
+    public IActionResult Update(int id) {
+        ContatoModel contato = _contatoRepository.ListById(id);
+        return View(contato);
     }
     
-    public IActionResult DeleteConfirmation() {
-        return View();
+    public IActionResult DeleteConfirmation(int id) {
+        ContatoModel contato = _contatoRepository.ListById(id);
+        
+        return View(contato);
+    }
+
+    public IActionResult Delete(int id) {
+        _contatoRepository.Delete(id);
+        
+        return RedirectToAction("Index");
     }
 
     [HttpPost]
@@ -35,5 +44,14 @@ public class ContatoController : Controller {
 
         return RedirectToAction("Index"); // Redireciona para a página Index
     }
+    
+    [HttpPost]
+    public IActionResult Update(ContatoModel contato) {
+        _contatoRepository.Update(contato);
+
+        return RedirectToAction("Index");
+    }
+    
+    
     
 }
