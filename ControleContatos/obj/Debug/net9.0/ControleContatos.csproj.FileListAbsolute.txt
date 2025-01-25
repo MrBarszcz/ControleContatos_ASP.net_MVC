@@ -229,4 +229,4 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/ControleContatos.csproj.AssemblyReference.cache
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/Controle.36340B36.Up2Date
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-1smtetv93k.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-v7hmro5xzx.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-nzd72vyvdp.gz
