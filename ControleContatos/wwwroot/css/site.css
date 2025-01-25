@@ -29,3 +29,20 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.field-validation-error { /* Cor das mensagens do formulário */
+  color: #e01d1d;
+}
+
+.close-alert {
+  position: absolute;
+  right: -10px;
+  top: -15px;
+  border-radius: 15px;
+  width: 30px;
+  height: 31px;
+}
+
+/*.close-alert:focus {*/
+/*  outline-color: #ea868f;*/
+/*}*/

@@ -16,16 +16,22 @@
         <label for="Name">Nome</label>
         
         <input type="text" asp-for="Nome" class="form-control" id="Name" placeholder="Digite o nome">
+        
+        @Html.ValidationMessageFor(x => x.Nome) @* Exibe a mensagem de erro caso o campo Nome esteja inválido *@
     </div>
     <div class="mb-3">
         <label for="Email">Email</label>
         
         <input type="text" asp-for="Email" class="form-control" id="Email" placeholder="Digite o email">
+        
+        @Html.ValidationMessageFor(x => x.Email)
     </div>
     <div class="mb-3">
         <label for="phoneNumber">Celular</label>
         
         <input type="text" asp-for="Celular" class="form-control" id="phoneNumber" placeholder="Digite o número de celular" aria-describedby="phoneNumberHelp">
+        
+        @Html.ValidationMessageFor(x => x.Celular)
         
         @* <div id="phoneNumberHelp" class="form-text">Digite o número de celular completo (somente número, sem espaços ou caracteres especiais)</div> *@
     </div>

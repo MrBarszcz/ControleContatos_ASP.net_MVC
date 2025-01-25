@@ -12,6 +12,25 @@
     
     <br/>
     
+    @if (TempData["MessageSucess"] != null ) {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        
+            @TempData["MessageSucess"]
+        </div>
+        <br/>
+    }
+    
+    @if (TempData["MessageError"] != null ) {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        
+            @TempData["MessageError"]
+        </div>
+        <br/>
+    }
+    
+    
     <h1 class="display-4">Listagem de Contatos</h1>
 
     <br/>

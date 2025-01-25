@@ -17,9 +17,7 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/scopedcss/bundle/ControleContatos.styles.css
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/scopedcss/projectbundle/ControleContatos.bundle.scp.css
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-lugek5hnai.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/ig13qt0ze1-61n19gt1b8.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-fr7q2aak1r.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/a19hgdtplb-bqjiyaj88i.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/bhkwiqihvw-c2jlpeoesf.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/6dpzwxt77c-erw9l3u2r3.gz
@@ -230,3 +228,5 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/ControleContatos.csproj.AssemblyReference.cache
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/Controle.36340B36.Up2Date
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-1smtetv93k.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-v7hmro5xzx.gz
