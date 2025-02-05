@@ -77,8 +77,6 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/v0o882iqut-muycvpuwrr.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/xkin0m6tx4-87fc7y1x7t.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/s3d4v9x32a-jfsiqqwiad.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/yezgyi7bg2-n61ijsszto.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/mrl0cncxj4-n61ijsszto.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/staticwebassets.build.json
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/staticwebassets.development.json
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/staticwebassets.build.endpoints.json
@@ -229,4 +227,8 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/ControleContatos.csproj.AssemblyReference.cache
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/Controle.36340B36.Up2Date
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-1smtetv93k.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-nzd72vyvdp.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-u7mdpfx7nl.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/scopedcss/Views/Shared/_LayoutDeslogada.cshtml.rz.scp.css
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/yezgyi7bg2-sm9sq52wlw.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/mrl0cncxj4-sm9sq52wlw.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/Newtonsoft.Json.dll

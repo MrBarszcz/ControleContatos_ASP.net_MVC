@@ -1,11 +1,12 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-// função para exibir a tebela de contatos, com a utilização do plugin DataTable e a configuração do mesmo 
+﻿// função que envia a tabela que deve ser estilizada pelo plugin DataTable e com a configuração para português 
 $(document).ready(function () {
-    $('#tableContacts').DataTable({
+    getDatatable('#tableContacts');
+    getDatatable('#tableUsers');
+});
+
+// função que estiliza a tabela e configura o plugin DataTable em português
+function getDatatable( id ) {
+    $(id).DataTable({
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -33,7 +34,7 @@ $(document).ready(function () {
             }
         }
     });
-});
+}
 
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
