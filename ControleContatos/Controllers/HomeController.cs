@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using ControleContatos.Filters;
 using Microsoft.AspNetCore.Mvc;
 using ControleContatos.Models;
 
 namespace ControleContatos.Controllers;
 
+[PageUserLogged] // Aplica o filtro de verificação de usuário logado
 public class HomeController : Controller {
     public IActionResult Index()
     {

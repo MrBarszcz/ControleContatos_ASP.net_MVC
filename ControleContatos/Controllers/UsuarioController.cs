@@ -1,9 +1,11 @@
+using ControleContatos.Filters;
 using ControleContatos.Models;
 using ControleContatos.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleContatos.Controllers;
 
+[AdminRestrictedPage]
 public class UsuarioController : Controller {
     private readonly IUsuarioRepository _usuarioRepository;
 

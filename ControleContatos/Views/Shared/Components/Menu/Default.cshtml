@@ -1,3 +1,4 @@
+@using Microsoft.EntityFrameworkCore.Storage.ValueConversion
 @model UsuarioModel
 
 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Olá, @Model.Nome</a>
@@ -15,10 +16,14 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="Contato"
                asp-action="Index">Contatos</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario"
-               asp-action="Index">Usuários</a>
-        </li>
+        
+        @if(Model.Perfil == ControleContatos.Enums.PerfilEnum.Admin) { // se o usuário for admi, ESCONDE a opção de usuários no menu
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario"
+                   asp-action="Index">Usuários</a>
+            </li>
+        }
+        
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Login"
                asp-action="Logout">Logout</a>
