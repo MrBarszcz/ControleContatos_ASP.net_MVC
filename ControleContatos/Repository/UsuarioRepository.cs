@@ -25,6 +25,8 @@ public class UsuarioRepository : IUsuarioRepository {
     public UsuarioModel Create(UsuarioModel usuario) {
         usuario.DataCadastro = DateTime.Now;
         
+        usuario.SetPasswordHash();
+        
         _bancoContext.Usuarios.Add(usuario);
         
         _bancoContext.SaveChanges();

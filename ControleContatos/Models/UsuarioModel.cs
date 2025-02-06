@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using ControleContatos.Enums;
+using ControleContatos.Helper;
 
 namespace ControleContatos.Models;
 
@@ -27,6 +28,10 @@ public class UsuarioModel {
     public DateTime? DataAlteracao { get; set; } // ? define que o campo pode ser nulo
     
     public bool SenhaValida(string senha) {
-        return Senha == senha;
+        return Senha == senha.GenerateHash();
+    }
+
+    public void SetPasswordHash() { // método para criptografar a senha
+        Senha = Senha.GenerateHash(); // o this faz com que seja possivel usar o metodo aqui
     }
 }
