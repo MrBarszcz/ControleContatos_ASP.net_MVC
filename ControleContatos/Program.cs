@@ -12,9 +12,8 @@ var builder = WebApplication.CreateBuilder( args );
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Adiciona os serviços do Entity Framework Core para SQL Server e configura o BancoContext para usar o SQL Server com a string de conexão especificada.
-builder.Services.AddEntityFrameworkSqlServer()
-    .AddDbContext < BancoContext >( o => o.UseSqlServer( builder.Configuration.GetConnectionString( "Database" ) ) );
+// Registro do DbContext - REMOVA A CONFIGURAÇÃO DA STRING DE CONEXÃO AQUI
+builder.Services.AddDbContext<BancoContext>(); // O OnConfiguring do BancoContext fará o resto
 
 builder.Services.AddSingleton < IHttpContextAccessor, HttpContextAccessor >(); // Registra o serviço de acesso ao contexto HTTP
 
