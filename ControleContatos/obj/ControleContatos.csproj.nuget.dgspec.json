@@ -44,6 +44,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.69.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.1, )"
@@ -63,6 +71,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

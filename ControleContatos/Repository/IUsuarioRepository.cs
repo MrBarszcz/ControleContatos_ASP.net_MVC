@@ -6,6 +6,8 @@ public interface IUsuarioRepository {
     
     UsuarioModel ListbyLogin(string login);
     
+    UsuarioModel SearchEmailLogin (string email, string login);
+    
     UsuarioModel ListById(int id);
     
     List<UsuarioModel> GetAll();

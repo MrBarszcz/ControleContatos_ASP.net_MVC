@@ -4,6 +4,7 @@ using ControleContatos.Models;
 using ControleContatos.Repository;
 using Microsoft.EntityFrameworkCore;
 using ISession = ControleContatos.Helper.ISession;
+using Microsoft.Extensions.Options;
 
 
 var builder = WebApplication.CreateBuilder( args );
@@ -17,10 +18,17 @@ builder.Services.AddEntityFrameworkSqlServer()
 
 builder.Services.AddSingleton < IHttpContextAccessor, HttpContextAccessor >(); // Registra o serviço de acesso ao contexto HTTP
 
+
+builder.Services.Configure < SmtpSettingsModel >( builder.Configuration.GetSection( "SMTP" ) );
+
+builder.Configuration.AddUserSecrets<Program>(); // Importante! Adiciona o secret manager
+
+
 builder.Services.AddScoped < IContatoRepository, ContatoRepository >();
 builder.Services.AddScoped < IUsuarioRepository, UsuarioRepository >();
 
 builder.Services.AddScoped <ISession, Session>(); // Registra o serviço de sessão
+builder.Services.AddScoped <IEmail, Email>(); // Registra o serviço de email
 
 builder.Services.AddSession( o => {
     o.Cookie.HttpOnly = true;

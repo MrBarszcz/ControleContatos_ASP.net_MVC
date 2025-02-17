@@ -14,6 +14,10 @@ public class UsuarioRepository : IUsuarioRepository {
         return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
     }
 
+    public UsuarioModel SearchEmailLogin( string email, string login ) {
+        return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper() && x.Email.ToUpper() == email.ToUpper());
+    }
+
     public UsuarioModel ListById(int id) {
         return _bancoContext.Usuarios.FirstOrDefault(x => x.Id == id);
     }

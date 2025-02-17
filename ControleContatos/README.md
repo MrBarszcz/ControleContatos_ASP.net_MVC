@@ -1,5 +1,7 @@
 na appsettings.json, na string de conexão o TrustServerCertificate=True, desativa a criptografia SSL 
 
+na appsettings.json, 
+
 dotnet ef database update // Atualiza o banco de dados com as migrações
 
 dotnet ef migrations add CriandoTabelaContatos --context BancoContext // Cria uma migração para o contexto BancoContext

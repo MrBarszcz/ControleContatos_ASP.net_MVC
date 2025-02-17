@@ -34,4 +34,12 @@ public class UsuarioModel {
     public void SetPasswordHash() { // método para criptografar a senha
         Senha = Senha.GenerateHash(); // o this faz com que seja possivel usar o metodo aqui
     }
+
+    public string GenerateNewPassword() {
+        string novaSenha = Guid.NewGuid().ToString().Substring( 0, 8 ); // gera uma senha aleatória de 8 caracteres
+        
+        Senha = novaSenha.GenerateHash();
+        
+        return novaSenha;
+    }
 }
