@@ -72,8 +72,7 @@ public class LoginController : Controller {
                     string novaSenha = usuario.GenerateNewPassword(); // gera uma nova senha para o usuário
 
                     bool emailEnviado =
-                        _email.Enviar( usuario.Email, "Redefinição de senha",
-                            $"Sua nova senha é: {novaSenha}" ); // envia a nova senha por email
+                        _email.Enviar( usuario.Email, "Redefinição de senha", usuario, novaSenha); // envia a nova senha por email
 
                     if ( emailEnviado == true) {
                         _usuarioRepository.Update( usuario );

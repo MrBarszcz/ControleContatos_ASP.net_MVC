@@ -15,7 +15,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.1",
           "Microsoft.Extensions.Configuration.UserSecrets": "9.0.2",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "RazorEngine": "3.10.0"
         },
         "runtime": {
           "ControleContatos.dll": {}
@@ -116,6 +117,14 @@
           "lib/net8.0/MailKit.dll": {
             "assemblyVersion": "4.10.0.0",
             "fileVersion": "4.10.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.Razor/3.0.0": {
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.11001.0"
           }
         }
       },
@@ -906,6 +915,17 @@
           }
         }
       },
+      "RazorEngine/3.10.0": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.0.0"
+        },
+        "runtime": {
+          "lib/net45/RazorEngine.dll": {
+            "assemblyVersion": "3.10.0.0",
+            "fileVersion": "3.10.0.0"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -1259,6 +1279,13 @@
       "sha512": "sha512-C6gwHQGHru2x/g1pzk0NXn5BIv0qoeKbSgb4BIFfWl4OjTZOEajSIR+O6i4WElsuJI8Z77LGr4rH5nVjypyvDQ==",
       "path": "mailkit/4.10.0",
       "hashPath": "mailkit.4.10.0.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Razor/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mU1W0PRd1uQAb+triRGp51YYkw26RQ9q1tWPX57eHqxDqjx1smRHhejQhhnoAGr3bZDkl8AoUxegGR3tNM+YKA==",
+      "path": "microsoft.aspnet.razor/3.0.0",
+      "hashPath": "microsoft.aspnet.razor.3.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1616,6 +1643,13 @@
       "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "RazorEngine/3.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xWjGSjhMTM+Qzh3kabsRXR7kpCZQALbYGGYrOPc7wf6IBeDee4OVuO/LRTgWpgIFA8W/widTfszLBm0MfVHRGg==",
+      "path": "razorengine/3.10.0",
+      "hashPath": "razorengine.3.10.0.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

@@ -22,6 +22,7 @@
       </PackageReference>
       <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.2" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="RazorEngine" Version="3.10.0" />
     </ItemGroup>
 
 </Project>

@@ -247,3 +247,5 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/System.Web.Razor.dll
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/RazorEngine.dll
