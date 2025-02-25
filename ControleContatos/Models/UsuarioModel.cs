@@ -27,12 +27,19 @@ public class UsuarioModel {
     
     public DateTime? DataAlteracao { get; set; } // ? define que o campo pode ser nulo
     
+    
+    public virtual List<ContatoModel> Contatos { get; set; }
+    
     public bool SenhaValida(string senha) {
         return Senha == senha.GenerateHash();
     }
 
     public void SetPasswordHash() { // método para criptografar a senha
         Senha = Senha.GenerateHash(); // o this faz com que seja possivel usar o metodo aqui
+    }
+    
+    public void SetNewPassword(string novaSenha) {
+        Senha = novaSenha.GenerateHash();
     }
 
     public string GenerateNewPassword() {

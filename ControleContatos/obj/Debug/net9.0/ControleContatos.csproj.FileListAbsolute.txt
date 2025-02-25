@@ -226,8 +226,6 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/ControleContatos.csproj.AssemblyReference.cache
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/Controle.36340B36.Up2Date
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-1smtetv93k.gz
-/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-u7mdpfx7nl.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/scopedcss/Views/Shared/_LayoutDeslogada.cshtml.rz.scp.css
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/yezgyi7bg2-sm9sq52wlw.gz
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/mrl0cncxj4-sm9sq52wlw.gz
@@ -249,3 +247,5 @@
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/System.Web.Razor.dll
 /home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/bin/Debug/net9.0/RazorEngine.dll
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/t5bnabkn98-hsh31ye4a6.gz
+/home/mrbarszcz/RiderProjects/ControleContatos/ControleContatos/obj/Debug/net9.0/compressed/koex0p0vhc-xtcc52jbyr.gz

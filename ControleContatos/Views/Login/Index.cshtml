@@ -32,8 +32,15 @@
   </div>
   <div class="mb-3">
     <label for="Senha" class="form-label">Senha</label>
-    <input type="password" asp-for="Senha" class="form-control" id="Senha">
-    
+    <div class="password-container">
+      <input type="password" asp-for="Senha" class="form-control" id="Senha">
+      
+      <div class="eye-container" id="eye-container">
+        <i class="bi bi-eye" id="eye-open"></i>
+        <i class="bi bi-eye-slash d-none" id="eye-closed"></i>
+      </div>
+    </div>
+
     @Html.ValidationMessageFor( x => x.Senha )
   </div>
   

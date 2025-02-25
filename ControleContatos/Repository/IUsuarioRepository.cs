@@ -16,6 +16,8 @@ public interface IUsuarioRepository {
     
     UsuarioModel Update(UsuarioModel usuario);
     
+    UsuarioModel UpdadePassword(UpdatePasswordModel updatePasswordModel);
+    
     bool Delete(int id);
     
 }

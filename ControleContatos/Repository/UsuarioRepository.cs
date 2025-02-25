@@ -55,6 +55,24 @@ public class UsuarioRepository : IUsuarioRepository {
         return usuarioDB;
     }
 
+    public UsuarioModel UpdadePassword(UpdatePasswordModel updatePasswordModel) {
+        UsuarioModel UsuarioDB = ListById(updatePasswordModel.Id);
+        
+        if (UsuarioDB == null) throw new Exception("Houve um erro ao atualizar a senha, usúario não encontrado");
+        
+        if (!UsuarioDB.SenhaValida(updatePasswordModel.SenhaAtual)) throw new Exception("Senha atual inválida");
+        
+        if (UsuarioDB.SenhaValida(updatePasswordModel.NovaSenha)) throw new Exception("A nova senha não pode ser igual a senha atual");
+
+        UsuarioDB.SetNewPassword(updatePasswordModel.NovaSenha);
+        UsuarioDB.DataAlteracao = DateTime.Now;
+        
+        _bancoContext.Usuarios.Update(UsuarioDB);
+        _bancoContext.SaveChanges();
+        
+        return UsuarioDB;
+    }
+
     public bool Delete(int id) {
         UsuarioModel usuarioDB = ListById(id);
         

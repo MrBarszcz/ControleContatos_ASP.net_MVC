@@ -6,12 +6,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Atualizar Contato</h1>
+    <h1 class="display-4">Cadastrar Contato</h1>
 </div>
 
 <br/>
 
+
 <form asp-controller="Contato" asp-action="Create" method="post"> @* Formulário de cadastro de contato, que envia os dados para a action Create do controller Contato via método POST *@
+    @* <input type="hidden" asp-for="UsuarioId"> *@
+    
     <div class="mb-3">
         <label for="Name">Nome</label>
         

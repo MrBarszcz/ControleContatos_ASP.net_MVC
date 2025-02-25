@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 html {
   font-size: 14px;
 }
@@ -43,6 +45,19 @@ body {
   height: 31px;
 }
 
-/*.close-alert:focus {*/
-/*  outline-color: #ea868f;*/
-/*}*/
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eye-container {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.eye-container .bi {
+  font-size: 20px;
+  color: #000;
+}

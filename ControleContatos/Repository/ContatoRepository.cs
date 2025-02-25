@@ -14,16 +14,23 @@ public class ContatoRepository : IContatoRepository {
         return _bancoContext.Contatos.FirstOrDefault(x => x.Id == id); // Retorna o contato com o id informado
     }
 
-    public List<ContatoModel> GetAll() {
-        return _bancoContext.Contatos.ToList(); // Retorna todos os contatos do banco de dados
+    public List<ContatoModel> GetAll(int usuarioId) {
+        return _bancoContext.Contatos.Where(x => x.UsuarioId == usuarioId).ToList(); // Retorna todos os contatos do banco de dados
     }
 
     public ContatoModel Create(ContatoModel contato) {
+        Console.WriteLine("chegou no create");
+        
         // Gravar no banco de dados
         _bancoContext.Contatos.Add(contato); // Adiciona o contato ao banco de dados
         
+        Console.WriteLine("chegou a adicionar");
+
+        
         _bancoContext.SaveChanges(); // Salva as alterações no banco de dados
         
+        Console.WriteLine("chegou no save changes");
+
         return contato;
     }
 
