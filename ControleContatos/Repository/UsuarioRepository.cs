@@ -1,5 +1,6 @@
 using ControleContatos.Data;
 using ControleContatos.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleContatos.Repository;
 
@@ -23,7 +24,9 @@ public class UsuarioRepository : IUsuarioRepository {
     }
 
     public List<UsuarioModel> GetAll() {
-        return _bancoContext.Usuarios.ToList();
+        return _bancoContext.Usuarios
+            .Include(x => x.Contatos) // Include para trazer os contatos do usuário
+            .ToList();
     }
 
     public UsuarioModel Create(UsuarioModel usuario) {

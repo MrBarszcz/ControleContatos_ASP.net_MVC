@@ -8,9 +8,11 @@ namespace ControleContatos.Controllers;
 [AdminRestrictedPage]
 public class UsuarioController : Controller {
     private readonly IUsuarioRepository _usuarioRepository;
+    private readonly IContatoRepository _contatoRepository;
 
-    public UsuarioController( IUsuarioRepository usuarioRepository ) {
+    public UsuarioController( IUsuarioRepository usuarioRepository, IContatoRepository contatoRepository ) {
         _usuarioRepository = usuarioRepository;
+        _contatoRepository = contatoRepository;
     }
 
     // GET
@@ -51,6 +53,11 @@ public class UsuarioController : Controller {
 
             return RedirectToAction( "Index" );
         }
+    }
+
+    public IActionResult ListContactsById(int Id) {
+        List<ContatoModel> contatos = _contatoRepository.GetAll(Id);
+        return PartialView("_ContatosUsuario", contatos);
     }
 
     [HttpPost]

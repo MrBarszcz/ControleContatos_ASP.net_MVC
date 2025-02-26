@@ -2,6 +2,21 @@
 $(document).ready(function () {
     getDatatable('#tableContacts');
     getDatatable('#tableUsers');
+    
+    $('.btn-total-contatos').click(function () {
+        var usuarioId = $(this).attr('usuario-id');
+        
+        $.ajax({
+            type: 'GET',
+            url: '/Usuario/ListContactsById/' + usuarioId, 
+            success: function(result){
+               $("#ListContactsUser").html(result);
+               $('#modalContatosUsuario').modal('show');
+                getDatatable('#tableContactsUser');
+            }
+        });
+        
+    });
 });
 
 // função que estiliza a tabela e configura o plugin DataTable em português

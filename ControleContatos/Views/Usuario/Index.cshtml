@@ -43,6 +43,7 @@
             <th scope="col">Login</th>
             <th scope="col">Email</th>
             <th scope="col">Perfil</th>
+            <th scope="col">Total de Contatos</th>
             <th scope="col">Data de Cadastro</th>
             <th scope="col"></th>
         </tr>
@@ -56,6 +57,11 @@
                     <td>@usuario.Login</td>
                     <td>@usuario.Email</td>
                     <td>@(usuario.Perfil == PerfilEnum.Admin ? "Admin" : "Usuário")</td>
+                    <td>
+                        <a href="javascript:" usuario-id="@usuario.Id" class="btn btn-success btn-sm btn-total-contatos">
+                            @(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0) @*Total de contatos, Se o usúario tiver contatos, conte quantos são, se não mostre 0*@
+                        </a>
+                    </td>
                     <td>@usuario.DataCadastro</td>
                     <td>
                         <div class="btn-group" role="group">
@@ -65,8 +71,28 @@
                     </td>
                 </tr>
             }
+        } else {
+            <tr>
+                <td colspan="8">Nenhum registro encontrado</td>
+            </tr>
         }
         </tbody>
     </table>
 
+    <div id="modalContatosUsuario" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Listagem de Contatos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="ListContactsUser"></div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
 </div>
