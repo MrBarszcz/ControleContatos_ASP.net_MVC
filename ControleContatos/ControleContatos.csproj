@@ -25,4 +25,8 @@
       <PackageReference Include="RazorEngine" Version="3.10.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

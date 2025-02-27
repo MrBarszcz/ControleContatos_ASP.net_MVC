@@ -30,6 +30,8 @@ public class UsuarioRepository : IUsuarioRepository {
     }
 
     public UsuarioModel Create(UsuarioModel usuario) {
+        Console.WriteLine("Chegou até aqui");
+        
         usuario.DataCadastro = DateTime.Now;
         
         usuario.SetPasswordHash();
@@ -37,6 +39,8 @@ public class UsuarioRepository : IUsuarioRepository {
         _bancoContext.Usuarios.Add(usuario);
         
         _bancoContext.SaveChanges();
+        
+        Console.WriteLine("Chegou até aqui o SaveChanges");
         
         return usuario;
     }

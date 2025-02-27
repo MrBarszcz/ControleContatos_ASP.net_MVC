@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleContatos.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20250224175222_CriandoVinculoUsuarioNaContato")]
-    partial class CriandoVinculoUsuarioNaContato
+    [Migration("20250226225731_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,7 +97,8 @@ namespace ControleContatos.Migrations
                 {
                     b.HasOne("ControleContatos.Models.UsuarioModel", "Usuario")
                         .WithMany("Contatos")
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Usuario");
                 });

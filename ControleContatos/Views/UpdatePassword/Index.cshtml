@@ -32,49 +32,39 @@
 <form asp-controller="UpdatePassword" asp-action="Update" method="post">
 
     <div class="mb-3">
-        <label for="SenhaAtual">Senha</label>
+        <label for="SenhaAtual">Senha Atual</label>
 
         <div class="password-container">
             <input type="password" asp-for="SenhaAtual" class="form-control" id="SenhaAtual"
                    placeholder="Digite a senha atual do usúario">
 
-            <div class="eye-container" id="eye-container">
-                <i class="bi bi-eye" id="eye-open"></i>
-                <i class="bi bi-eye-slash d-none" id="eye-closed"></i>
-            </div>
+            <i class="bi bi-eye" id="btn-show-SenhaAtual" onclick="showPassword('SenhaAtual', 'btn-show-SenhaAtual')"></i>
         </div>
 
         @Html.ValidationMessageFor(x => x.SenhaAtual)
     </div>
 
     <div class="mb-3">
-        <label for="NovaSenha">Senha</label>
-
+        <label for="NovaSenha">Nova Senha</label>
+    
         <div class="password-container">
             <input type="password" asp-for="NovaSenha" class="form-control" id="NovaSenha"
                    placeholder="Digite sua nova senha">
 
-            <div class="eye-container" id="eye-container">
-                <i class="bi bi-eye" id="eye-open"></i>
-                <i class="bi bi-eye-slash d-none" id="eye-closed"></i>
-            </div>
+            <i class="bi bi-eye" id="btn-show-NovaSenha" onclick="showPassword('NovaSenha', 'btn-show-NovaSenha')"></i>
         </div>
 
         @Html.ValidationMessageFor(x => x.NovaSenha)
     </div>
 
     <div class="mb-3">
-        <label for="ConfirmarNovaSenha">Senha</label>
+        <label for="ConfirmarNovaSenha">Confirme a Senha</label>
 
         <div class="password-container">
-
             <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" id="ConfirmarNovaSenha"
                    placeholder="Confirme sua nova senha">
 
-            <div class="eye-container" id="eye-container">
-                <i class="bi bi-eye" id="eye-open"></i>
-                <i class="bi bi-eye-slash d-none" id="eye-closed"></i>
-            </div>
+            <i class="bi bi-eye" id="btn-show-ConfirmarNovaSenha" onclick="showPassword('ConfirmarNovaSenha', 'btn-show-ConfirmarNovaSenha')"></i>
         </div>
         @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
     </div>

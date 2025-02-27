@@ -28,7 +28,7 @@ public class UsuarioModel {
     public DateTime? DataAlteracao { get; set; } // ? define que o campo pode ser nulo
     
     
-    public virtual List<ContatoModel> Contatos { get; set; }
+    public virtual List<ContatoModel>? Contatos { get; set; }
     
     public bool SenhaValida(string senha) {
         return Senha == senha.GenerateHash();

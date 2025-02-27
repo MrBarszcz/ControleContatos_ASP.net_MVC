@@ -64,11 +64,19 @@ public class UsuarioController : Controller {
     public IActionResult Create( UsuarioModel usuario ) {
         try {
             if ( ModelState.IsValid ) {
+                Console.WriteLine("Chegou até o create");
+                
                 _usuarioRepository.Create( usuario );
 
                 TempData [ "MessageSuccess" ] = "Usuario cadastrado com sucesso!";
 
                 return RedirectToAction( "Index" );
+            } else {
+                foreach (var modelState in ModelState.Values) {
+                    foreach (var error in modelState.Errors) {
+                        Console.WriteLine(error.ErrorMessage);
+                    }
+                }
             }
 
             return View( usuario );

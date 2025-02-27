@@ -94,7 +94,8 @@ namespace ControleContatos.Migrations
                 {
                     b.HasOne("ControleContatos.Models.UsuarioModel", "Usuario")
                         .WithMany("Contatos")
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Usuario");
                 });

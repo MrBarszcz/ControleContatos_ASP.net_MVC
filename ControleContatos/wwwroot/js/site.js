@@ -55,20 +55,15 @@ $('.close-alert').click(function () {
     $('.alert').hide('hide');
 });
 
-document.querySelectorAll('.eye-container').forEach((eyeContainer, index) => {
-    const eyeOpen = document.getElementById(`eye-open-${index + 1}`);
-    const eyeClosed = document.getElementById(`eye-closed-${index + 1}`);
-    const passwordInput = eyeContainer.previousElementSibling;
-
-    eyeContainer.addEventListener('click', () => {
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            eyeOpen.classList.add('d-none');
-            eyeClosed.classList.remove('d-none');
-        } else {
-            passwordInput.type = 'password';
-            eyeOpen.classList.remove('d-none');
-            eyeClosed.classList.add('d-none');
-        }
-    });
-});
+function showPassword(inputId, buttonId) {
+    var inputPassword = document.getElementById(inputId);
+    var btnShow = document.getElementById(buttonId);
+    
+    if ( inputPassword.type === 'password' ) {
+        inputPassword.setAttribute('type', 'text');
+        btnShow.classList.replace('bi-eye', 'bi-eye-slash');
+    } else {
+        inputPassword.setAttribute('type', 'password');
+        btnShow.classList.replace('bi-eye-slash', 'bi-eye');
+    }
+}
