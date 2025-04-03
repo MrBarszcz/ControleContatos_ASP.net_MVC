@@ -1,0 +1,133 @@
+@{
+    Layout = "_LayoutDeslogada";
+}
+
+<div class="container-login">
+    <div class="content first-content">
+        <div class="first-collumn">
+            <h2 class="title-login title-login-primary">Bem Vindo de Volta!</h2>
+            <p class="description description-primary">
+                para se manter conectado
+            </p>
+            <p class="description description-primary">
+                por favor, faça login com suas informações pessoais
+            </p>
+
+            <button class="button-login btn-login-primary">Conecte-se</button>
+        </div>
+        <div class="second-collumn">
+            <h2 class="title-login title-login-secondary">Criar Conta</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-google"></i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-github"></i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-linkedin"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <p class="description description-secondary">Ou use seu email para registro:</p>
+
+            <form class="form">
+                <label for="name">
+                    <i class="bi bi-person"></i>
+                    <input type="text" placeholder="Nome Completo" id="name">
+                </label>
+
+                <label for="">
+                    <i class="bi bi-person-square"></i>
+                    <input type="text" placeholder="Nome de Usuário">
+                </label>
+                <label for="">
+                    <i class="bi bi-envelope-at"></i>
+                    <input type="email" placeholder="Email">
+                </label>
+
+                <div class="password-container">
+                    <label for="">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" placeholder="Senha" id="SenhaLoginTeste">
+
+                        <i class="bi bi-eye btn-show" id="btn-show-SenhaLoginTeste" onclick="showPassword('SenhaLoginTeste', 'btn-show-SenhaLoginTeste')"></i>
+                    </label>
+                    
+                </div>
+                
+
+                <input type="hidden" value="2"> <!-- 2 é o valor para o tipo de usuário ser o comum -->
+
+
+                <button class="button-login btn-login-secondary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="content second-content">
+        <div class="first-collumn">
+            <h2 class="title-login title-login-primary">Eai Amigo!</h2>
+
+            <p class="description description-primary">
+                não tem cadastro?
+            </p>
+
+            <p class="description description-primary">
+                por favor, faça seu cadastro <br> com suas informações pessoais
+            </p>
+
+            <button class="button-login btn-login-primary">Cadastre-se</button>
+        </div>
+        <div class="second-collumn">
+            <h2 class="title-login title-login-secondary">Conectar</h2>
+
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-google"></i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-github"></i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="item-social-media">
+                            <i class="bi bi-linkedin"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <p class="description description-secondary">Ou use seu email para logar:</p>
+
+            <form class="form">
+                <label for="">
+                    <i class="bi bi-person-square"></i>
+                    <input type="text" placeholder="Nome de Usuário">
+                </label>
+
+                <label for="">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" placeholder="Senha" id="SenhaCadTeste">
+
+                    <i class="bi bi-eye btn-show" id="btn-show-SenhaCadTeste" onclick="showPassword('SenhaCadTeste', 'btn-show-SenhaCadTeste')"></i>
+                </label>
+
+                <p class="">Esqueceu a senha? <a href="">Clique aqui</a></p>
+
+                <button class="button-login btn-login-secondary">Conecte</button>
+            </form>
+        </div>
+    </div>
+</div>

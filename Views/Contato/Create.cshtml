@@ -1,0 +1,49 @@
+@* Conectando a view com o model ContatoModel *@
+@model ContatoModel
+
+@{
+    ViewData["Title"] = "Cadastrar Contato";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Contato</h1>
+</div>
+
+<br/>
+
+
+<form asp-controller="Contato" asp-action="Create" method="post"> @* Formulário de cadastro de contato, que envia os dados para a action Create do controller Contato via método POST *@
+    @* <input type="hidden" asp-for="UsuarioId"> *@
+    
+    <div class="mb-3">
+        <label for="Name">Nome</label>
+        
+        <input type="text" asp-for="Nome" class="form-control" id="Name" placeholder="Digite o nome">
+        
+        @Html.ValidationMessageFor(x => x.Nome) @* Exibe a mensagem de erro caso o campo Nome esteja inválido *@
+    </div>
+    <div class="mb-3">
+        <label for="Email">Email</label>
+        
+        <input type="text" asp-for="Email" class="form-control" id="Email" placeholder="Digite o email">
+        
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="mb-3">
+        <label for="phoneNumber">Celular</label>
+        
+        <input type="text" asp-for="Celular" class="form-control" id="phoneNumber" placeholder="Digite o número de celular" aria-describedby="phoneNumberHelp">
+        
+        @Html.ValidationMessageFor(x => x.Celular)
+        
+        @* <div id="phoneNumberHelp" class="form-text">Digite o número de celular completo (somente número, sem espaços ou caracteres especiais)</div> *@
+    </div>
+    
+    <br/>
+    
+    <div class="d-flex gap-2">
+        <a role="button" class="btn btn-danger w-50" asp-controller="Contato" asp-action="Index">Cancelar</a>
+        
+        <button type="submit" class="btn btn-primary w-50">Enviar</button> @* Botão de envio do formulário, tem que ser com a tag button e com type, com a tag a não funciona *@
+    </div>
+</form>

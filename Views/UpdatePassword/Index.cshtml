@@ -1,0 +1,79 @@
+@using ControleContatos.Enums
+@model UpdatePasswordModel
+
+@{
+    ViewData["Title"] = "Alterar Senha do Usúario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alterar Senha do Usúario</h1>
+</div>
+
+<br/>
+
+@if (TempData["MessageSuccess"] != null) {
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+
+        @TempData["MessageSuccess"]
+    </div>
+    <br/>
+}
+
+@if (TempData["MessageError"] != null) {
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+
+        @TempData["MessageError"]
+    </div>
+    <br/>
+}
+
+<form asp-controller="UpdatePassword" asp-action="Update" method="post">
+
+    <div class="mb-3">
+        <label for="SenhaAtual">Senha Atual</label>
+
+        <div class="password-container">
+            <input type="password" asp-for="SenhaAtual" class="form-control" id="SenhaAtual"
+                   placeholder="Digite a senha atual do usúario">
+
+            <i class="bi bi-eye" id="btn-show-SenhaAtual" onclick="showPassword('SenhaAtual', 'btn-show-SenhaAtual')"></i>
+        </div>
+
+        @Html.ValidationMessageFor(x => x.SenhaAtual)
+    </div>
+
+    <div class="mb-3">
+        <label for="NovaSenha">Nova Senha</label>
+    
+        <div class="password-container">
+            <input type="password" asp-for="NovaSenha" class="form-control" id="NovaSenha"
+                   placeholder="Digite sua nova senha">
+
+            <i class="bi bi-eye" id="btn-show-NovaSenha" onclick="showPassword('NovaSenha', 'btn-show-NovaSenha')"></i>
+        </div>
+
+        @Html.ValidationMessageFor(x => x.NovaSenha)
+    </div>
+
+    <div class="mb-3">
+        <label for="ConfirmarNovaSenha">Confirme a Senha</label>
+
+        <div class="password-container">
+            <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" id="ConfirmarNovaSenha"
+                   placeholder="Confirme sua nova senha">
+
+            <i class="bi bi-eye" id="btn-show-ConfirmarNovaSenha" onclick="showPassword('ConfirmarNovaSenha', 'btn-show-ConfirmarNovaSenha')"></i>
+        </div>
+        @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
+    </div>
+
+    <br/>
+
+    <div class="d-flex gap-2">
+        <a role="button" class="btn btn-danger w-50" asp-controller="Home" asp-action="Index">Cancelar</a>
+
+        <button type="submit" class="btn btn-primary w-50">Alterar</button>
+    </div>
+</form>

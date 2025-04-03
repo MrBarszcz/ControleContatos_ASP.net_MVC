@@ -1,0 +1,57 @@
+@using ControleContatos.Enums
+@model UsuarioModel
+
+@{
+    ViewData["Title"] = "Atualizar Usuário";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Atualizar Usuário</h1>
+</div>
+
+<br/>
+
+<form asp-controller="Usuario" asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id">
+    
+    <div class="mb-3">
+        <label for="Name">Nome</label>
+
+        <input type="text" asp-for="Nome " class="form-control" id="Name" placeholder="Digite o nome">
+
+        @Html.ValidationMessageFor( x => x.Nome )
+    </div>
+    <div class="mb-3">
+        <label for="Email">Email</label>
+
+        <input type="text" asp-for="Email " class="form-control" id="Email" placeholder="Digite o email">
+
+        @Html.ValidationMessageFor( x => x.Email )
+    </div>
+    <div class="mb-3">
+        <label for="Login">Login</label>
+
+        <input type="text" asp-for="Login " class="form-control" id="Login" placeholder="Digite o login para o usuário">
+
+        @Html.ValidationMessageFor( x => x.Login )
+    </div>
+    <div class="mb-3">
+        <label for="Perfil">Perfil</label>
+
+        <select id="Perfil" asp-for="Perfil " class="form-control">
+            <option value="">Selecione</option>
+            <option value="@PerfilEnum.Admin">Administrador</option>
+            <option value="@PerfilEnum.Default">Usuário</option>
+        </select>
+        
+        @Html.ValidationMessageFor( x => x.Perfil )
+    </div>
+
+    <br/>
+
+    <div class="d-flex gap-2">
+        <a role="button" class="btn btn-danger w-50" asp-controller="Usuario" asp-action="Index">Cancelar</a>
+
+        <button type="submit" class="btn btn-primary w-50">Enviar</button>
+    </div>
+</form>

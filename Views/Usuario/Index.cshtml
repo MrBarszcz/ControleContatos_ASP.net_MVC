@@ -1,0 +1,98 @@
+@using ControleContatos.Enums
+@model List<UsuarioModel>
+
+@{
+    ViewData["Title"] = "Listagem de Usuários";
+}
+
+<div class="text-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Create">Criar</a>
+    </div>
+
+    <br/>
+
+    @if (TempData["MessageSuccess"] != null ) {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+
+            @TempData["MessageSuccess"]
+        </div>
+        <br/>
+    }
+
+    @if (TempData["MessageError"] != null ) {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+
+            @TempData["MessageError"]
+        </div>
+        <br/>
+    }
+
+
+    <h1 class="display-4">Listagem de Usuários</h1>
+
+    <br/>
+
+    <table class="table" id="tableUsers">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Login</th>
+            <th scope="col">Email</th>
+            <th scope="col">Perfil</th>
+            <th scope="col">Total de Contatos</th>
+            <th scope="col">Data de Cadastro</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (Model != null && Model.Any()) {
+            foreach (var usuario in Model) {
+                <tr>
+                    <th scope="row">@usuario.Id</th>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Login</td>
+                    <td>@usuario.Email</td>
+                    <td>@(usuario.Perfil == PerfilEnum.Admin ? "Admin" : "Usuário")</td>
+                    <td>
+                        <a href="javascript:" usuario-id="@usuario.Id" class="btn btn-success btn-sm btn-total-contatos">
+                            @(usuario.Contatos != null && usuario.Contatos.Any() ? usuario.Contatos.Count() : 0) @*Total de contatos, Se o usúario tiver contatos, conte quantos são, se não mostre 0*@
+                        </a>
+                    </td>
+                    <td>@usuario.DataCadastro</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a role="button" class="btn btn-outline-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Update">Editar</a>
+                            <a role="button" class="btn btn-outline-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="DeleteConfirmation">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        } else {
+            <tr>
+                <td colspan="8">Nenhum registro encontrado</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <div id="modalContatosUsuario" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Listagem de Contatos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="ListContactsUser"></div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+</div>

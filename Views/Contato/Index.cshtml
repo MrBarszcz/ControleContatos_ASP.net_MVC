@@ -1,0 +1,74 @@
+@* Está view espera receber uma lista da model ContatoModel *@
+@model List<ContatoModel>
+
+@{
+    ViewData["Title"] = "Listagem de Contatos";
+}
+
+<div class="text-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Create">Criar</a>
+    </div>
+    
+    <br/>
+    
+    @if (TempData["MessageSuccess"] != null ) {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        
+            @TempData["MessageSuccess"]
+        </div>
+        <br/>
+    }
+    
+    @if (TempData["MessageError"] != null ) {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        
+            @TempData["MessageError"]
+        </div>
+        <br/>
+    }
+    
+    
+    <h1 class="display-4">Listagem de Contatos</h1>
+
+    <br/>
+    
+    <table class="table" id="tableContacts">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Celular</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any()) { /* Se minha model não for nula e se ela conter algo*/
+                foreach (ContatoModel contato in Model) {
+                    <tr>
+                        <th scope="row">@contato.Id</th>
+                        <td>@contato.Nome</td>
+                        <td>@contato.Email</td>
+                        <td>@contato.Celular</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-outline-primary" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="Update">Editar</a>
+                                <a role="button" class="btn btn-outline-danger" asp-route-id="@contato.Id" asp-controller="Contato" asp-action="DeleteConfirmation">Apagar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            } else {
+                <tr>
+                    <td colspan="8">Nenhum registro encontrado</td>
+                </tr>
+            }
+        
+        
+        </tbody>
+    </table>
+
+</div>
